@@ -18,7 +18,7 @@ spec:
         heritage: "{{ .Release.Service }}"
     spec:
       containers:
-      - name: {{ template "fullname" . }}
+      - name: apache-broker 
         image: "bitnami/apache:{{ .Values.imageTag }}"
         imagePullPolicy: {{ default "" .Values.imagePullPolicy | quote }}
         ports:
